@@ -24,7 +24,7 @@ Capstone-Java-LMS
             |- ValidationException.java
             |-- InvalidItemDataException.java
             |-- InvalidMemberDataException.java
-            |-- InvlaidLoanDataException.java
+            |-- InvalidLoanDataException.java
             |-- InvalidCommandException.java
         |
         |- operations/
