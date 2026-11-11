@@ -25,8 +25,10 @@ Capstone-Java-LMS
         |- ItemNotOnLoanException.java
     |   
     |_ services/
-        |- 
+        |- Library.java
     |_ utils/
+        |- CommandParser.java
+        |- OutputFormatter.java
 |
 |
 |_ README.md
