@@ -18,11 +18,23 @@ Capstone-Java-LMS
         |- Borrowable.java
     |
     |_ exceptions/
-        |- ItemNotFoundException.java
-        |- MemberNotFoundException.java
-        |- ItemNotAvailableException.java
-        |- BorrowLimitExceededException.java
-        |- ItemNotOnLoanException.java
+        |- LibraryException.java
+        |
+        |- validation/
+            |- ValidationException.java
+            |-- InvalidItemDataException.java
+            |-- InvalidMemberDataException.java
+            |-- InvlaidLoanDataException.java
+            |-- InvalidCommandException.java
+        |
+        |- operations/
+            |- ItemNotFoundException.java
+            |- MemberNotFoundException.java
+            |- ItemNotAvailableException.java
+            |- BorrowLimitExceededException.java
+            |- ItemNotOnLoanException.java
+            |- DuplicateItemException.java
+            |- DuplicateMemberException.java
     |   
     |_ services/
         |- Library.java
