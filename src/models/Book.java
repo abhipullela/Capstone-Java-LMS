@@ -1,6 +1,7 @@
 package models;
+import interfaces.Borrowable;
 
-public class Book extends LibraryItem {
+public class Book extends LibraryItem implements Borrowable {
     private String author;
     public Book(String Id, String title ,String author) {
         super(Id, title);

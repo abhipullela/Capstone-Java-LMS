@@ -1,6 +1,7 @@
 package models;
+import interfaces.Borrowable;
 
-public class Magazine extends LibraryItem {
+public class Magazine extends LibraryItem implements Borrowable {
     private String issue;
     public Magazine(String Id, String title, String issue) {
         super(Id, title);
