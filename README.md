@@ -26,6 +26,7 @@ Capstone-Java-LMS
             |-- InvalidMemberDataException.java
             |-- InvalidLoanDataException.java
             |-- InvalidCommandException.java
+            |-- InvalidTimeException.java
         |
         |- operations/
             |- ItemNotFoundException.java
