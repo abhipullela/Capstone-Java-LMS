@@ -1,9 +1,13 @@
 package models;
+import exceptions.validation.InvalidItemDataException;
 import interfaces.Borrowable;
 
 public class Magazine extends LibraryItem implements Borrowable {
     private String issue;
     public Magazine(String Id, String title, String issue) {
+        if (issue==null || issue.isBlank()) {
+            throw new InvalidItemDataException("Issue cannot be null or blank.");
+        }
         super(Id, title);
         this.issue = issue;
     }

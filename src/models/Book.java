@@ -1,9 +1,13 @@
 package models;
+import exceptions.validation.InvalidItemDataException;
 import interfaces.Borrowable;
 
 public class Book extends LibraryItem implements Borrowable {
     private String author;
     public Book(String Id, String title ,String author) {
+        if (author == null || author.isBlank()) {
+            throw new InvalidItemDataException("Author cannot be null or blank.");
+        }
         super(Id, title);
         this.author = author;
     }
