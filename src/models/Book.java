@@ -9,7 +9,7 @@ public class Book extends LibraryItem implements Borrowable {
             throw new InvalidItemDataException("Author cannot be null or blank.");
         }
         super(Id, title);
-        this.author = author;
+        this.author = author.trim();
     }
     public String getAuthor() {
         return author;

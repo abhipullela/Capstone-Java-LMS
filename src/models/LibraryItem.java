@@ -11,8 +11,8 @@ abstract public class LibraryItem {
         if (title==null || title.isBlank()) {
             throw new InvalidItemDataException("Title cannot be null or blank.");
         }
-        this.ID = Id;
-        this.title = title;
+        this.ID = Id.trim();
+        this.title = title.trim();
     }
     public String getID() {
         return ID;

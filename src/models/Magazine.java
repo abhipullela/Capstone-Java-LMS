@@ -9,7 +9,7 @@ public class Magazine extends LibraryItem implements Borrowable {
             throw new InvalidItemDataException("Issue cannot be null or blank.");
         }
         super(Id, title);
-        this.issue = issue;
+        this.issue = issue.trim();
     }
     public String getIssue() {
         return issue;

@@ -11,8 +11,8 @@ abstract public class Member {
         if (name == null || name.isBlank()) {
             throw new InvalidMemberDataException("Name cannot be null or blank.");
         }
-        this.id = id;
-        this.name = name;
+        this.id = id.trim();
+        this.name = name.trim();
     }
     public String getId() {
         return id;

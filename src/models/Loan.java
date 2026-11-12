@@ -25,8 +25,8 @@ public class Loan {
         if (dueDate < borrowDay) {
             throw new InvalidLoanDataException("Due date cannot be earlier than borrow day.");
         }
-        this.itemId = itemId;
-        this.memberId = memberId;
+        this.itemId = itemId.trim();
+        this.memberId = memberId.trim();
         this.borrowDay = borrowDay;
         this.dueDate = dueDate;
     }
