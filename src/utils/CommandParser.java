@@ -53,6 +53,14 @@ public class CommandParser {
             }
         }
 
+        if (command.equals("ADVANCE")) {
+            try {
+                Integer.parseInt(parts[1]);
+            } catch(NumberFormatException e) {
+                throw new InvalidCommandException("ADVANCE requires an valid integer parameter/arguement.");
+            }
+        }
+
         return parts;
     }   
 }
