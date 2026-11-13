@@ -158,7 +158,7 @@ public class Library {
         return results;
     }
 
-    List<Loan> loanFor(String memberId) {
+    List<Loan> loansFor(String memberId) {
         if (memberId == null || memberId.isBlank()) {
             throw new InvalidMemberDataException("Member ID cannot be null or blank.");
         }
