@@ -36,6 +36,18 @@ public class Library {
         today = 0;
     }
 
+    public Loan getActiveLoan(String itemId) {
+        return activeLoans.get(itemId);
+    }
+
+    public LibraryItem findItem(String itemId) {
+        return items.get(itemId);
+    }
+
+    public int getToday() {
+        return today;
+    }
+
     void addItem(LibraryItem item) {
         if (item == null) {
             throw new InvalidItemDataException("The Library Item cannot be null.");
