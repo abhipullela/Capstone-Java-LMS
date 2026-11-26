@@ -1,48 +1,48 @@
-Capstone-Java-LMS
-|
-|_ src/
-    |_ Main.java
-    |
-    |- models/
-        |- LibraryItem.java
-        |- Book.java
-        |- Magazine.java
-        |- ReferenceBook.java
-        |- Member.java
-        |- Student.java
-        |- Staff.java
-        |- Faculty.java
-        |- Loan.java
-    |
-    |_ interfaces/
-        |- Borrowable.java
-    |
-    |_ exceptions/
-        |- LibraryException.java
-        |
-        |- validation/
-            |- ValidationException.java
-            |-- InvalidItemDataException.java
-            |-- InvalidMemberDataException.java
-            |-- InvalidLoanDataException.java
-            |-- InvalidCommandException.java
-            |-- InvalidTimeException.java
-        |
-        |- operations/
-            |- ItemNotFoundException.java
-            |- MemberNotFoundException.java
-            |- ItemNotAvailableException.java
-            |- BorrowLimitExceededException.java
-            |- ItemNotOnLoanException.java
-            |- DuplicateItemException.java
-            |- DuplicateMemberException.java
-    |   
-    |_ services/
-        |- Library.java
-    |_ utils/
-        |- CommandParser.java
-        |- OutputFormatter.java
-|
-|
-|_ README.md
-|_ .gitignore
+Capstone-Java-LMS/
+│
+├── src/
+│   ├── Main.java
+│   │
+│   ├── models/
+│   │   ├── LibraryItem.java
+│   │   ├── Book.java
+│   │   ├── Magazine.java
+│   │   ├── ReferenceBook.java
+│   │   ├── Member.java
+│   │   ├── Student.java
+│   │   ├── Staff.java
+│   │   ├── Faculty.java
+│   │   └── Loan.java
+│   │
+│   ├── interfaces/
+│   │   └── Borrowable.java
+│   │
+│   ├── exceptions/
+│   │   ├── LibraryException.java
+│   │   │
+│   │   ├── validation/
+│   │   │   ├── ValidationException.java
+│   │   │   ├── InvalidItemDataException.java
+│   │   │   ├── InvalidMemberDataException.java
+│   │   │   ├── InvalidLoanDataException.java
+│   │   │   ├── InvalidCommandException.java
+│   │   │   └── InvalidTimeException.java
+│   │   │
+│   │   └── operations/
+│   │       ├── ItemNotFoundException.java
+│   │       ├── MemberNotFoundException.java
+│   │       ├── ItemNotAvailableException.java
+│   │       ├── BorrowLimitExceededException.java
+│   │       ├── ItemNotOnLoanException.java
+│   │       ├── DuplicateItemException.java
+│   │       └── DuplicateMemberException.java
+│   │
+│   ├── services/
+│   │   └── Library.java
+│   │
+│   └── utils/
+│       ├── CommandParser.java
+│       └── OutputFormatter.java
+│
+├── README.md
+└── .gitignore
