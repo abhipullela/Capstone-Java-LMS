@@ -5,10 +5,10 @@ import interfaces.Borrowable;
 public class Magazine extends LibraryItem implements Borrowable {
     private String issue;
     public Magazine(String Id, String title, String issue) {
+        super(Id, title);
         if (issue==null || issue.isBlank()) {
             throw new InvalidItemDataException("Issue cannot be null or blank.");
         }
-        super(Id, title);
         this.issue = issue.trim();
     }
     public String getIssue() {

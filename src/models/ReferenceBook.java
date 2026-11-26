@@ -4,11 +4,11 @@ import exceptions.validation.InvalidItemDataException;
 
 public class ReferenceBook extends LibraryItem{
     private String author;
-    ReferenceBook(String Id, String title, String author) {
+    public ReferenceBook(String Id, String title, String author) {
+        super(Id, title);
         if (author == null || author.isBlank()) {
             throw new InvalidItemDataException("Author cannot be null or blank.");
         }
-        super(Id, title);
         this.author = author.trim();
     }
     public String getAuthor() {
@@ -16,7 +16,7 @@ public class ReferenceBook extends LibraryItem{
     }
     @Override
     public String getItemType() {
-        return "REFERENCEBOOK";
+        return "REFERENCE";
     } 
     @Override 
     public boolean isBorrowable() {

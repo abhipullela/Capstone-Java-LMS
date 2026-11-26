@@ -48,7 +48,7 @@ public class Library {
         return today;
     }
 
-    void addItem(LibraryItem item) {
+    public void addItem(LibraryItem item) {
         if (item == null) {
             throw new InvalidItemDataException("The Library Item cannot be null.");
         }
@@ -58,7 +58,7 @@ public class Library {
         items.put(item.getID(), item);
     }
 
-    void addMember(Member member) {
+    public void addMember(Member member) {
         if (member == null) {
             throw new InvalidMemberDataException("The Member cannot be null.");
         }
@@ -68,7 +68,7 @@ public class Library {
         members.put(member.getId(), member);
     }
 
-    void borrow(String memberId, String itemId) {
+    public void borrow(String memberId, String itemId) {
         if (memberId == null || memberId.isBlank()) {
             throw new InvalidMemberDataException("Member ID cannot be null or blank.");
         }
@@ -86,19 +86,19 @@ public class Library {
         
         LibraryItem item = getItem(itemId);
         if (item == null) {
-            throw new ItemNotFoundException("Item with ID " + itemId + " does not exist.");
+            throw new ItemNotFoundException("Item " + itemId + " not found");
         }
 
         if (!item.isBorrowable()) {
-            throw new ItemNotAvailableException("Item: " + itemId + " is not eligible for borrowing.");
+            throw new ItemNotAvailableException(itemId + " cannot be borrowed");
         }
         if (activeLoans.containsKey(itemId)) {
-            throw new ItemNotAvailableException("Item: "+ itemId+ " is already borrowed.");
+            throw new ItemNotAvailableException(itemId + " is on loan");
         }
 
         int currentLoans = countActiveLoans(memberId);
         if (currentLoans >= member.maxItems()) {
-            throw new BorrowLimitExceededException("Member " + memberId + " has reached the borrowing limit.");
+            throw new BorrowLimitExceededException("Member " + memberId + " has reached the limit of "+member.maxItems());
         }
 
         int dueDate;
@@ -113,7 +113,7 @@ public class Library {
         activeLoans.put(itemId, loan);
     }
 
-    int returnItem(String itemId) {
+    public int returnItem(String itemId) {
         if (itemId == null || itemId.isBlank()) {
             throw new InvalidItemDataException("Item ID cannot be null or blank.");
         }
@@ -126,7 +126,7 @@ public class Library {
 
         Loan loan = activeLoans.get(itemId);
         if (loan == null) {
-            throw new ItemNotFoundException("Item "+itemId+" is not currently on loan.");
+            throw new ItemNotFoundException(itemId + " is not on loan");
         }
 
         if (!(item instanceof Borrowable)) {
@@ -139,7 +139,7 @@ public class Library {
         return fine;
     }
 
-    int advance(int days) {
+    public int advance(int days) {
         if (days <= 0) {
             throw new InvalidTimeException("Number of days to advance must be positive.");
         }
@@ -152,7 +152,7 @@ public class Library {
         return today;
     }
 
-    List<LibraryItem> search(String text) {
+    public List<LibraryItem> search(String text) {
         if (text == null || text.isBlank()) {
             throw new InvalidCommandException("Search text cannot be null or blank.");
         }
@@ -170,7 +170,7 @@ public class Library {
         return results;
     }
 
-    List<Loan> loansFor(String memberId) {
+    public List<Loan> loansFor(String memberId) {
         if (memberId == null || memberId.isBlank()) {
             throw new InvalidMemberDataException("Member ID cannot be null or blank.");
         }
@@ -190,7 +190,7 @@ public class Library {
         return loans;
     }
 
-    List<Loan> overdue() {
+    public List<Loan> overdue() {
         List<Loan> overdueLoans = new ArrayList<>();
         for(Loan loan : activeLoans.values()) {
             if (loan.daysLate(today) > 0) overdueLoans.add(loan);
@@ -199,7 +199,7 @@ public class Library {
         return overdueLoans;
     }
 
-    List<LibraryItem> inventory() {
+    public List<LibraryItem> inventory() {
         List<LibraryItem> inventoryList = new ArrayList<>(items.values());
         inventoryList.sort(Comparator.comparing(LibraryItem::getID));
         return inventoryList;
