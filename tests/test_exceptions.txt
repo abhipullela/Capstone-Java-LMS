@@ -1,0 +1,35 @@
+ADD_BOOK | B1 | Clean Code | Robert C. Martin
+ADD_BOOK | B2 | Design Patterns | Gamma
+ADD_BOOK | B3 | Refactoring | Fowler
+ADD_BOOK | B4 | Effective Java | Bloch
+ADD_BOOK | B5 | Java Concurrency in Practice | Goetz
+ADD_MAGAZINE | M1 | IEEE Spectrum | Nov 2026
+ADD_REFERENCE | R1 | Oxford English Dictionary | Oxford
+ADD_MEMBER | S1 | Aarav Sharma | STUDENT
+ADD_MEMBER | T1 | Priya Nair | STAFF
+ADD_MEMBER | F1 | Dr. Vikram Rao | FACULTY
+BORROW | S1 | B99
+BORROW | M99 | B1
+BORROW | S1 | R1
+RETURN | B1
+BORROW | S1 | B1
+BORROW | T1 | B1
+BORROW | S1 | B2
+BORROW | S1 | B3
+BORROW | S1 | B4
+BORROW | T1 | B4
+BORROW | T1 | B5
+BORROW | T1 | M1
+RETURN | B1
+BORROW | T1 | B1
+BORROW | T1 | B2
+RETURN | B1
+RETURN | B4
+RETURN | B5
+RETURN | M1
+BORROW | F1 | B1
+BORROW | F1 | B2
+BORROW | F1 | B3
+BORROW | F1 | B4
+BORROW | F1 | B5
+BORROW | F1 | M1

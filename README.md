@@ -46,7 +46,22 @@ Capstone-Java-LMS/
 │
 ├── tests/
 │   ├── sample.txt
-│   └── expected.txt
+|   ├── out.txt
+│   ├── expected.txt
+│   ├── test_exceptions.txt
+│   └── expected_exceptions.txt
+|
 ├── README.md
 ├── .gitignore
 └── Java Capstone UML IC2025021.pdf
+
+## Build and Run
+
+### 1. Compile
+From the project root directory:
+javac -d out src/Main.java src/interfaces/*.java src/models/*.java src/services/*.java src/utils/*.java src/exceptions/*.java src/exceptions/operations/*.java src/exceptions/validation/*.java
+
+### 2. Run Interactive Mode
+java -cp out Main
+Get-Content tests/sample.txt | java -cp out Main | Out-File -FilePath tests/out.txt -Encoding utf8
+Compare-Object (Get-Content tests/expected.txt) (Get-Content tests/out.txt)

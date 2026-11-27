@@ -81,12 +81,12 @@ public class Library {
 
         Member member = getMember(memberId);
         if (member == null) {
-            throw new MemberNotFoundException("Member with Member ID: "+memberId+" does not exist.");
+            throw new MemberNotFoundException("member " + memberId + " not found");
         }
         
         LibraryItem item = getItem(itemId);
         if (item == null) {
-            throw new ItemNotFoundException("Item " + itemId + " not found");
+            throw new ItemNotFoundException("item " + itemId + " not found");
         }
 
         if (!item.isBorrowable()) {
@@ -121,12 +121,12 @@ public class Library {
 
         LibraryItem item = items.get(itemId);
         if (item==null) {
-            throw new ItemNotFoundException("Item with ID "+itemId+" does not exist.");
+            throw new ItemNotFoundException("item " + itemId + " not found");
         }
 
         Loan loan = activeLoans.get(itemId);
         if (loan == null) {
-            throw new ItemNotFoundException(itemId + " is not on loan");
+            throw new ItemNotOnLoanException(itemId + " is not on loan");
         }
 
         if (!(item instanceof Borrowable)) {
@@ -177,7 +177,7 @@ public class Library {
         memberId = memberId.trim();
 
         if (!members.containsKey(memberId)) {
-            throw new MemberNotFoundException("Member with ID " + memberId + " does not exist.");
+            throw new MemberNotFoundException("member " + memberId + " not found");
         }
 
         List<Loan> loans = new ArrayList<>();

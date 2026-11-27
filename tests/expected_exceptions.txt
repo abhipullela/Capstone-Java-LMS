@@ -1,0 +1,35 @@
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+ERROR item B99 not found
+ERROR member M99 not found
+ERROR R1 cannot be borrowed
+ERROR B1 is not on loan
+OK due on day 14
+ERROR B1 is on loan
+OK due on day 14
+OK due on day 14
+ERROR S1 has reached the limit of 3
+OK due on day 21
+OK due on day 21
+OK due on day 21
+OK fine 0
+OK due on day 21
+ERROR B2 is on loan
+OK fine 0
+OK fine 0
+OK fine 0
+OK fine 0
+OK due on day 30
+ERROR B2 is on loan
+ERROR B3 is on loan
+OK due on day 30
+OK due on day 30
+OK due on day 30

@@ -1,0 +1,38 @@
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK due on day 14
+OK due on day 14
+OK due on day 14
+ERROR S1 has reached the limit of 3
+OK due on day 30
+ERROR B1 is on loan
+ERROR R1 cannot be borrowed
+ERROR item B9 not found
+OK today is day 10
+OK due on day 31
+OK today is day 20
+OK fine 12
+ERROR B4 is not on loan
+OK today is day 35
+B1|Introduction to Algorithms|14
+M1|Resonance|14
+B1|S1|21|42
+M1|S1|21|21
+B2|F1|5|10
+B3|T1|4|8
+B1|BOOK|ON_LOAN|S1
+B2|BOOK|ON_LOAN|F1
+B3|BOOK|ON_LOAN|T1
+B4|BOOK|AVAILABLE
+M1|MAGAZINE|ON_LOAN|S1
+R1|REFERENCE|NOT_BORROWABLE
+B4|BOOK|Compilers: Principles, Techniques, and Tools
+B3|BOOK|The Art of Computer Programming
+NONE

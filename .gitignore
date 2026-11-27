@@ -1,16 +1,16 @@
-# Java compiled class files
+# Compiled Java class files and build output
 *.class
-
-# Compiled output directories
 out/
-bin/
-build/
-tests/
 
-# IDE files
+# Generated test outputs (keep input/expected test scripts)
+tests/out*.txt
+out.txt
+
+# IDE & Editor folders
 .vscode/
 .idea/
+*.iml
 
-# OS-generated files
+# OS-specific files
 .DS_Store
 Thumbs.db
