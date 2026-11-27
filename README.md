@@ -1,3 +1,5 @@
+## Project Structure
+
 Capstone-Java-LMS/
 │
 ├── src/
@@ -61,7 +63,9 @@ Capstone-Java-LMS/
 From the project root directory:
 javac -d out src/Main.java src/interfaces/*.java src/models/*.java src/services/*.java src/utils/*.java src/exceptions/*.java src/exceptions/operations/*.java src/exceptions/validation/*.java
 
-### 2. Run Interactive Mode
+### 2.a. Run Interactive Mode
 java -cp out Main
+
+### 2.b. Run with file input and output
 Get-Content tests/sample.txt | java -cp out Main | Out-File -FilePath tests/out.txt -Encoding utf8
 Compare-Object (Get-Content tests/expected.txt) (Get-Content tests/out.txt)
