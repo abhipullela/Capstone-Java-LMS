@@ -98,7 +98,7 @@ public class Library {
 
         int currentLoans = countActiveLoans(memberId);
         if (currentLoans >= member.maxItems()) {
-            throw new BorrowLimitExceededException("Member " + memberId + " has reached the limit of "+member.maxItems());
+            throw new BorrowLimitExceededException(memberId + " has reached the limit of "+member.maxItems());
         }
 
         int dueDate;

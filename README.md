@@ -44,6 +44,9 @@ Capstone-Java-LMS/
 │       ├── CommandParser.java
 │       └── OutputFormatter.java
 │
+├── tests/
+│   ├── sample.txt
+│   └── expected.txt
 ├── README.md
 ├── .gitignore
 └── Java Capstone UML IC2025021.pdf

@@ -5,6 +5,7 @@
 out/
 bin/
 build/
+tests/
 
 # IDE files
 .vscode/
